@@ -1,0 +1,39 @@
+﻿<Window x:Class="EyeGalleryWPF.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeGalleryWPF.Views"
+        mc:Ignorable="d"
+        Title="Photos" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+
+        <Menu FontSize="20" Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Open" Command="{Binding OpenFolderCommand}"/>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Save as"/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Add File" Command="{Binding AddFileCommand}"/>
+                <MenuItem Header="Add Folder"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Tiles"/>
+                <MenuItem Header="Small Icons"/>
+                <MenuItem Header="Details"/>
+            </MenuItem>
+            <MenuItem Header="About">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
+
+        <Frame Name="Main" Height="400" Content="{Binding Page}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>

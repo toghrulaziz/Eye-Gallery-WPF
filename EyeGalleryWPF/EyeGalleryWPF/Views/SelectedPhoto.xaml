@@ -1,0 +1,48 @@
+﻿<Page x:Class="EyeGalleryWPF.Views.SelectedPhoto"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EyeGalleryWPF.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SelectedPhoto">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Name="btn_back" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent">
+            <Image Source="https://cdn-icons-png.flaticon.com/512/61/61167.png"/>
+        </Button>
+
+        <Image Grid.Row="1" Source="{Binding CurrentPhoto}"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/3236/3236910.png"/>
+            </Button>
+            <Button Grid.Column="2" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/61/61180.png"/>
+            </Button>
+            <Button Grid.Column="3" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="https://static.thenounproject.com/png/4514086-200.png"/>
+            </Button>
+            <Button Grid.Column="4" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/1/1122.png"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
